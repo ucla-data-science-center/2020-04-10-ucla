@@ -59,6 +59,9 @@ This block includes the Eventbrite registration widget if
 are not using Eventbrite, or leave it in, since it will not be
 displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
+
+
+
 {% if page.eventbrite %}
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
@@ -78,13 +81,34 @@ INTRODUCTION
 Edit the general explanatory paragraph below if you want to change
 the pitch.
 {% endcomment %}
+
 {% if site.carpentry == "swc" %}
 {% include swc/intro.html %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/intro.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
+{% elsif site.carpentry == "none" %}
+{% include none/intro.html %}
 {% endif %}
+
+<!-- Place the following link anywhere in your page. Make sure the id "s_lc_event_6628534" matches with the above code: jQuery("#s_lc_event_6628534")  //-->
+<a id="s_lc_event_6628534" href="https://calendar.library.ucla.edu/event/6628534">CLICK AND REGISTER</a>
+<!-- Below is optional element styling  //-->
+<style>
+#s_lc_event_6628534 {
+  background: #2774AE;
+  border: 1px solid #2774AE;
+  border-radius: 4px;
+  color: #E6F1F2;
+  font: 14px Arial, Helvetica, Verdana;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+#s_lc_event_6628534:hover {
+  opacity: 0.9;
+}
+</style>
 
 {% comment %}
 AUDIENCE
@@ -98,6 +122,8 @@ workshop is only open to people from a particular institution.
 {% include dc/who.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/who.html %}
+{% elsif site.carpentry == "none" %}
+{% include none/who.html %}
 {% endif %}
 
 {% comment %}
@@ -108,14 +134,13 @@ if the latitude and longitude of the workshop have been set.  You
 can use https://itouchmap.com/latlong.html to find the lat/long of an
 address.
 {% endcomment %}
+
+
 {% if page.latitude and page.longitude %}
 <p id="where">
   <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
+  <a href="{{page.address}}">{{page.address}}</a>.
+
 </p>
 {% endif %}
 
