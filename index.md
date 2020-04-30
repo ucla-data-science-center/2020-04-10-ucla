@@ -257,6 +257,15 @@ We will use this <a href="{{page.collaborative_notes}}">collaborative document</
 <hr/>
 {% endif %}
 
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li>Video Recordings & materials from this workshop: <a href="https://doi.org/10.25346/S6/ZJKUAC">https://doi.org/10.25346/S6/ZJKUAC</a></li>
+  <li><a href="https://ucla-data-archive.github.io/2020-ucla-r/">Lecture notes & code</a></li>
+  <li><a href="https://github.com/ucla-data-archive/2020-ucla-r">GitHub Repo for lecture notes & code</a></li>
+  <li><a href="https://pad.carpentries.org/2020-ucla-r">Etherpad from Day 1 & 2</a></li>
+  <li><a href="https://pad.carpentries.org/2020-ucla-r-2">Ehterpad from Day 3 & 4</a></li>
+</ul>
 
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
